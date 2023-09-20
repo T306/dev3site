@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Page Not Found</title>
+        <script type="text/javascript">
+
+            let seconds = 6;
+            // countdown timer. took 6 because page takes approx 1 sec to load
+
+            const url = "{{url_for('home')}}";
+
+            // variable for index.html url
+
+        function redirect(){
+         if (seconds <=0){
+
+         // redirect to new url after counter  down.
+          window.location = url;
+         } else {
+          seconds--;
+          document.getElementById("pageInfo").innerHTML="Redirecting to Home Page after "
+        +seconds+" seconds."
+          setTimeout("redirect()", 1000)
+         }
+        }
+        </script>
+    </head>
+<body onload="redirect()">
+<p id="pageInfo"></p>
+</body>
+</html>

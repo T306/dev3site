@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" lang="en" style="font-family: Ubuntu, sans-serif;">
+
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>T306Dev | {{ title }}</title>
+        <meta name="theme-color" content="#0693d0">
+        <link rel="canonical" href="https://t306.dev{{ page }}">
+        <meta property="og:url" content="https://t306.dev/">
+        <meta name="twitter:title" content="Home of T306Dev">
+        <meta name="twitter:card" content="summary">
+        <meta property="og:image" content="https://t306.dev/assets/img/me.webp">
+        <meta property="og:type" content="website">
+        <meta name="twitter:image" content="https://t306.dev/assets/img/me.webp">
+        <link rel="icon" type="image/png" sizes="1024x1024" href="{{ url_for('static', filename='assets/img/me.png') }}">
+        <link rel="icon" type="image/png" sizes="1024x1024" href="{{ url_for('static', filename='assets/img/me.png') }}">
+        <link rel="icon" type="image/png" sizes="1024x1024" href="{{ url_for('static', filename='assets/img/me.png') }}">
+        <link rel="icon" type="image/png" sizes="1024x1024" href="{{ url_for('static', filename='assets/img/me.png') }}">
+        <link rel="icon" type="image/png" sizes="1024x1024" href="{{ url_for('static', filename='assets/img/me.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+        <link rel="manifest" href="{{url_for('static', filename='manifest.json') }}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker&amp;display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap">
+        <link rel="stylesheet" href="{{url_for('static', filename='assets/css/gradient-navbar-styles.css') }}">
+        <link rel="stylesheet" href="{{url_for('static', filename='assets/css/gradient-navbar.css') }}">
+    {% endblock %}
+</head>
+{% block content %}
+    {% block nav %}
+        <nav class="navbar navbar-expand-md bg-body navbar-dark" id="app-navbar" style="margin-bottom: 30px;">
+        <div class="container-fluid"><a class="navbar-brand" href="#"><span style="color: #0693d0;font-family: Permanent Marker,serif;font-size: 27px;">T306Dev</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link {{ 'nav-link active' if request.path == url_for('home') }}" href="{{ url_for('home') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link {{ 'nav-link active' if request.path == url_for('projects') }}" href="{{ url_for('projects') }}">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link {{ 'nav-link active' if request.path == url_for('about') }}" href="{{ url_for('about') }}">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% endblock %}
+{% endblock %}
+<script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/bs-init.js') }}"></script>
+</html>

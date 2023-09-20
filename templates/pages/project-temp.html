@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+<body style="color: var(--bs-body-color);font-family: Ubuntu, sans-serif;">
+{% block content %}
+    {% block nav %}
+        {{ super() }}
+    {% endblock %}
+    <div class="posts">
+      <h1>{{project['title']}}</h1>
+      <p>{{project['content']}}<p>
+      <strong>{{project['author']}}</strong>{{project['date']}}
+    </div>
+    </body>
+{% endblock %}

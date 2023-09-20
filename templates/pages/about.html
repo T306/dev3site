@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+<body>
+{% block content %}
+    {% block nav %}
+        {{ super() }}
+    {% endblock %}
+    <div class="container">
+        <section class="d-xl-flex align-items-xl-center">
+            <div class="border rounded-circle border-0 avatar" data-bss-hover-animate="pulse" style="background: url({{ url_for('static', filename='assets/img/T3.webp') }}) center / contain no-repeat;box-shadow: 0 0 20px 1px var(--bs-secondary-bg);height: 150px;width: 150px;margin: 0 83px 30px;"></div>
+            <div class="font-monospace">
+                <h1>Hi, I'm Timothy,</h1>
+                <h4>and I'm a person.</h4>
+            </div>
+        </section>
+    </div>
+    </body>
+{% endblock %}
