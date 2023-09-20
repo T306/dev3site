@@ -169,3 +169,4 @@ replit.nix
 docker-compose.yml
 Dockerfile
 .idea
+.github
