@@ -24,30 +24,16 @@
             </div>
         </div>
         <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-            <div class="col">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+            {% for project in projects %}
+                <div class="col">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="{{ url_for('static', filename='assets/img/me.webp') }}" alt="A picture">
                     <div class="py-4">
-                        <h4>Lorem libero donec</h4>
-                        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                        <h4>{{project['title']}}</h4>
+                        <p>{{project['description']}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                    <div class="py-4">
-                        <h4>Lorem libero donec</h4>
-                        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                    <div class="py-4">
-                        <h4>Lorem libero donec</h4>
-                        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div><a class="btn btn-primary btn-lg" role="button" style="background: linear-gradient(90deg, #0693d0, #c27ed3 100%);" href="{{ url_for('projects') }}">More Projects</a>
     </div>
     <div class="container py-4 py-xl-5">
@@ -89,7 +75,7 @@
             <div class="col" style="box-shadow: 0 0;">
                 <div class="d-flex flex-column justify-content-center align-items-center" style="box-shadow: 0 0 20px 1px var(--bs-secondary-bg);border-style: none;border-radius: 14px;">
                     <p class="text-center">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus.</p>
-                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+                    <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="A picture of someone important!">
                         <div>
                             <p class="fw-bold text-primary mb-0">John Smith</p>
                             <p class="text-muted mb-0">Erat netus</p>
