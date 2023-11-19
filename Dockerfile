@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.12-rc-slim-bookworm
+FROM python:3.12-rc-slim
 LABEL authors="T306Dev"
 
 EXPOSE 81
