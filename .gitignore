@@ -167,6 +167,5 @@ pyproject.toml
 replit.nix
 .upm/
 docker-compose.yml
-Dockerfile
 .idea
 .github
